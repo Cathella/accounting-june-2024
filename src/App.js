@@ -8,6 +8,7 @@ import Customers from './pages/people/Customers';
 import Vendors from './pages/people/Vendors';
 import Invoices from './pages/bills/Invoices';
 import Bills from './pages/bills/Bills';
+import Reports from './pages/reports/Reports';
 import AccountStatements from './pages/reports/AccountStatements';
 import BalanceSheets from './pages/reports/BalanceSheets';
 import TrialBalance from './pages/reports/TrialBalance';
@@ -36,15 +37,16 @@ function App() {
         <Route path="/vendors" element={<Vendors />} />
         <Route path="/invoices" element={<Invoices />} />
         <Route path="/bills" element={<Bills />} />
-        <Route path="/account_statements" element={<AccountStatements />} />
-        <Route path="/balance_sheets" element={<BalanceSheets />} />
-        <Route path="/trial_balance" element={<TrialBalance />} />
-        <Route path="/user_activity" element={<UserActivity />} />
+        <Route path="/reports" element={<Reports />} />
+        <Route path="/reports/account_statements" element={<AccountStatements />} />
+        <Route path="/reports/balance_sheets" element={<BalanceSheets />} />
+        <Route path="/reports/trial_balance" element={<TrialBalance />} />
+        <Route path="/reports/user_activity" element={<UserActivity />} />
         <Route path="/settings" element={<Settings />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/forgot_password" element={<ForgotPassword />} />
-        <Route path="/reset_password" element={<ResetPassword />} />
+        <Route path="/auth/login" element={<Login />} />
+        <Route path="/auth/register" element={<Register />} />
+        <Route path="/auth/forgot_password" element={<ForgotPassword />} />
+        <Route path="/auth/reset_password" element={<ResetPassword />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/company" element={<Company />} />
         <Route path="/invite_users" element={<InviteUsers />} />
