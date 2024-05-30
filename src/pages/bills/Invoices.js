@@ -1,6 +1,9 @@
+import SideNav from "../../components/SideNav";
+
 function Invoices() {
     return (
-      <div>
+      <div className="flex">
+        <SideNav />
         <h1>Invoices</h1>
       </div>
     );

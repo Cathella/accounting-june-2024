@@ -2,7 +2,7 @@ import SideNav from '../components/SideNav';
 
 function Dashboard() {
   return (
-    <div>
+    <div className="flex">
       <SideNav />
       <h1>Dashboard</h1>
     </div>

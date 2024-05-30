@@ -1,6 +1,9 @@
+import SideNav from "../../components/SideNav";
+
 function Groups() {
   return (
-    <div>
+    <div className="flex">
+      <SideNav />
       <h1>Groups</h1>
     </div>
   );

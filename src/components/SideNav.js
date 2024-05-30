@@ -1,13 +1,19 @@
-import { LayoutDashboard, Files, ArrowRightLeft, Users, CreditCard, ReceiptText, FileText, FolderClosed, Settings, ChevronDown } from 'lucide-react';
+import { LayoutDashboard, Files, ArrowRightLeft, Users, CreditCard, ReceiptText, FileText, FolderClosed, Settings, ChevronDown, Minus } from 'lucide-react';
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 function SideNav() {
       const location = useLocation();
-      const [isOpen, setIsOpen] = useState(false);
+      // const [isOpen, setIsOpen] = useState(false);
 
-      const toggleDropdown = () => {
-        setIsOpen(!isOpen);
+      // const toggleDropdown = () => {
+      //   setIsOpen(!isOpen);
+      // };
+
+      const [openDropdown, setOpenDropdown] = useState(null);
+
+      const toggleDropdown = (dropdownName) => {
+        setOpenDropdown(openDropdown === dropdownName ? null : dropdownName);
       };
 
       return (
@@ -23,7 +29,7 @@ function SideNav() {
             <div className="text-xs font-medium tracking-wide uppercase">
               You are managing:
             </div>
-            <div className="justify-center items-start px-4 py-3 mt-3 font-semibold bg-white rounded-xl text-slate-500">
+            <div className="justify-center items-start px-4 py-3 mt-3 font-semibold bg-white txt-color-blue rounded-xl">
               LedgerMate Inc
             </div>
             <div className="shrink-0 mt-6 h-px border border-solid bg-neutral-500 bg-opacity-10 border-neutral-500 border-opacity-10" />
@@ -32,67 +38,135 @@ function SideNav() {
             </div>
             <div
               className={`flex gap-2 py-3 mt-3 whitespace-nowrap rounded-xl ${
-                location.pathname === "/" ? "bg-blue-500 text-white px-4" : "bg-none"
+                location.pathname === "/" ? "bg-active-green txt-color-blue font-semibold px-4" : "bg-none"
               }`}
             >
               <LayoutDashboard className="shrink-0 self-start w-6 aspect-square" />
               <Link to="/">Dashboard</Link>
             </div>
-            <div
-              className={`flex gap-2 justify-between py-3 mt-2 rounded-xl ${
-                location.pathname === "/chart-of-accounts"
-                  ? "bg-blue-500 text-white  px-4"
-                  : "bg-none"
-              }`}
-            >
-              <div className="flex gap-2">
-                <Files className="shrink-0 self-start w-6 aspect-square" />
+            <div className="mt-3 py-3 w-full">
+              <button className="flex justify-between w-full" onClick={() => toggleDropdown('chartOfAccounts')}>
+                <span className="flex gap-2">
+                  <Files className="shrink-0 self-start w-6 aspect-square" />
+                  <span>Chart of Accounts</span>
+                </span>
+                <ChevronDown className="shrink-0 self-start w-6 aspect-square" />
+              </button>
+              {openDropdown === 'chartOfAccounts' && (
                 <div>
-                  <Link to="/chart-of-accounts">Chart of Accounts</Link>
+                  <div
+                    className={`flex gap-2 py-3 mt-2 whitespace-nowrap rounded-xl ${
+                      location.pathname === "/groups"
+                        ? "bg-active-green txt-color-blue font-semibold px-4 mt-3"
+                        : "bg-none"
+                    }`}
+                  >
+                    <Minus className="shrink-0 self-start w-6 aspect-square" />
+                    <Link to="/groups">Groups</Link>
+                  </div>
+                  <div
+                    className={`flex gap-2 py-3 mt-2 whitespace-nowrap rounded-xl ${
+                      location.pathname === "/subgroups"
+                        ? "bg-active-green txt-color-blue font-semibold px-4 mt-3"
+                        : "bg-none"
+                    }`}
+                  >
+                    <Minus className="shrink-0 self-start w-6 aspect-square" />
+                    <Link to="/subgroups">Subgroups</Link>
+                  </div>
+                  <div
+                    className={`flex gap-2 py-3 mt-2 whitespace-nowrap rounded-xl ${
+                      location.pathname === "/accounts"
+                        ? "bg-active-green txt-color-blue font-semibold px-4 mt-3"
+                        : "bg-none"
+                    }`}
+                  >
+                    <Minus className="shrink-0 self-start w-6 aspect-square" />
+                    <Link to="/accounts">Accounts</Link>
+                  </div>
                 </div>
-              </div>
-              <ChevronDown className="shrink-0 self-start w-6 aspect-square" />
+              )}
             </div>
             <div
               className={`flex gap-2 py-3 mt-2 whitespace-nowrap rounded-xl ${
                 location.pathname === "/transactions"
-                  ? "bg-blue-500 text-white  px-4"
+                  ? "bg-active-green txt-color-blue font-semibold px-4"
                   : "bg-none"
               }`}
             >
               <ArrowRightLeft className="shrink-0 self-start w-6 aspect-square" />
               <Link to="/transactions">Transactions</Link>
             </div>
-            <div
-              className={`flex gap-2 justify-between py-3 mt-2 w-full whitespace-nowrap rounded-xl ${
-                location.pathname === "/people"
-                  ? "bg-blue-500 text-white px-4"
-                  : "bg-none"
-              }`}
-            >
-              <div className="flex gap-2">
-                <Users className="shrink-0 self-start w-6 aspect-square" />
-                <Link to="/people">People</Link>
-              </div>
-              <ChevronDown className="shrink-0 self-start w-6 aspect-square" />
+            <div className="mt-3 py-3 w-full">
+              <button className="flex justify-between w-full" onClick={() => toggleDropdown('people')}>
+                <span className="flex gap-2">
+                  <Users className="shrink-0 self-start w-6 aspect-square" />
+                  <span>People</span>
+                </span>
+                <ChevronDown className="shrink-0 self-start w-6 aspect-square" />
+              </button>
+              {openDropdown === 'people' && (
+                <div>
+                  <div
+                    className={`flex gap-2 py-3 mt-2 whitespace-nowrap rounded-xl ${
+                      location.pathname === "/customers"
+                        ? "bg-active-green txt-color-blue font-semibold px-4 mt-3"
+                        : "bg-none"
+                    }`}
+                  >
+                    <Minus className="shrink-0 self-start w-6 aspect-square" />
+                    <Link to="/customers">Customers</Link>
+                  </div>
+                  <div
+                    className={`flex gap-2 py-3 mt-2 whitespace-nowrap rounded-xl ${
+                      location.pathname === "/vendors"
+                        ? "bg-active-green txt-color-blue font-semibold px-4 mt-3"
+                        : "bg-none"
+                    }`}
+                  >
+                    <Minus className="shrink-0 self-start w-6 aspect-square" />
+                    <Link to="/vendors">Vendors</Link>
+                  </div>
+                </div>
+              )}
             </div>
-            <div
-              className={`flex gap-2 justify-between py-3 mt-2 rounded-xl ${
-                location.pathname === "/bills-invoices"
-                  ? "bg-blue-500 text-white px-4"
-                  : "bg-none"
-              }`}
-            >
-              <div className="flex gap-2">
-                <ReceiptText className="shrink-0 self-start w-6 aspect-square" />
-                <Link to="/bills-invoices">Bills & invoices</Link>
-              </div>
-              <ChevronDown className="shrink-0 self-start w-6 aspect-square" />
+            <div className="mt-3 py-3 w-full">
+              <button className="flex justify-between w-full" onClick={() => toggleDropdown('bills')}>
+                <span className="flex gap-2">
+                  <ReceiptText className="shrink-0 self-start w-6 aspect-square" />
+                  <span>Bills & Invoices</span>
+                </span>
+                <ChevronDown className="shrink-0 self-start w-6 aspect-square" />
+              </button>
+              {openDropdown === 'bills' && (
+                <div>
+                  <div
+                    className={`flex gap-2 py-3 mt-2 whitespace-nowrap rounded-xl ${
+                      location.pathname === "/bills"
+                        ? "bg-active-green txt-color-blue font-semibold px-4 mt-3"
+                        : "bg-none"
+                    }`}
+                  >
+                    <Minus className="shrink-0 self-start w-6 aspect-square" />
+                    <Link to="/bills">Bills</Link>
+                  </div>
+                  <div
+                    className={`flex gap-2 py-3 mt-2 whitespace-nowrap rounded-xl ${
+                      location.pathname === "/invoices"
+                        ? "bg-active-green txt-color-blue font-semibold px-4 mt-3"
+                        : "bg-none"
+                    }`}
+                  >
+                    <Minus className="shrink-0 self-start w-6 aspect-square" />
+                    <Link to="/invoices">Invoices</Link>
+                  </div>
+                </div>
+              )}
             </div>
             <div
               className={`flex gap-2 py-3 mt-2 whitespace-nowrap rounded-xl ${
                 location.pathname === "/reports"
-                  ? "bg-blue-500 text-white px-4"
+                  ? "bg-active-green txt-color-blue font-semibold px-4"
                   : "bg-none"
               }`}
             >
@@ -102,7 +176,7 @@ function SideNav() {
             <div
               className={`flex gap-2 px-4 py-3 mt-60 whitespace-nowrap rounded-xl ${
                 location.pathname === "/settings"
-                  ? "bg-blue-500 text-white"
+                  ? "bg-active-green txt-color-blue font-semibold"
                   : "bg-white"
               }`}
             >

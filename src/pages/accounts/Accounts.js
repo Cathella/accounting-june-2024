@@ -1,6 +1,9 @@
+import SideNav from "../../components/SideNav";
+
 function Accounts() {
   return (
-    <div>
+    <div className="flex">
+      <SideNav />
       <h1>Accounts</h1>
     </div>
   );

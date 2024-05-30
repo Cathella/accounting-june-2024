@@ -2,7 +2,7 @@ import SideNav from "../../components/SideNav";
 
 function Reports() {
     return (
-      <div>
+      <div className="flex">
         <SideNav />
         <h1>Reports</h1>
       </div>
