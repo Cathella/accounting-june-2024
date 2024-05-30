@@ -2,6 +2,22 @@
     background-color: #C0D67C;
 }
 
+.bg-dirt-green {
+    background-color: #9EC137;
+}
+
+.bg-dark-blue {
+    background-color: #4467A1;
+}
+
 .txt-color-blue {
     color: #4467A1;
+}
+
+.fx-height-100 {
+    height: 100px;
+}
+
+.main-content {
+    width: 94%;
 }
