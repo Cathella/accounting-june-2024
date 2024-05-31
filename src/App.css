@@ -20,4 +20,14 @@
 
 .main-content {
     width: 94%;
+    height: calc(100vh - 72px);
+    overflow: auto;
+}
+
+.card-width {
+    width: 49%;
+}
+
+.side-nav {
+    overflow: auto;
 }
