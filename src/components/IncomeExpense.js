@@ -1,5 +1,3 @@
-import * as React from "react";
-
 function StatCard({ color, amount, title }) {
   return (
     <div className="flex flex-col">
