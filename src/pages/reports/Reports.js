@@ -1,5 +1,6 @@
 import ReportsNav from "../../components/ReportsNav";
 import SideNav from "../../components/SideNav";
+import StatementsData from "../../components/StatementsData";
 import TopNav from "../../components/TopNav";
 
 function Reports() {
@@ -16,6 +17,7 @@ function Reports() {
                 </div>
               </div>
               <ReportsNav />
+              <StatementsData />
             </div>
           </div>
         </div>

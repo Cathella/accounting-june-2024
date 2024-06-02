@@ -7,7 +7,7 @@ const Card = ({ children }) => (
 );
 
 const ReportsNav = () => (
-  <div className="flex gap-5 pr-20 text-base font-semibold leading-6 text-neutral-400 max-md:flex-wrap max-md:pr-5">
+  <div className="flex gap-5 px-6 text-base font-semibold leading-6 text-neutral-400 max-md:flex-wrap max-md:pr-5">
     <Card>
       <span className="text-slate-500">Account Statements</span>
     </Card>
