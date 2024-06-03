@@ -69,7 +69,7 @@ function RecentTransactions() {
   return (
     <div className="flex flex-col px-6 py-4 bg-white rounded-3xl max-md:px-5 w-full">
       <header className="flex gap-5 justify-between w-full max-md:flex-wrap max-md:max-w-full">
-        <h2 className="my-auto text-base font-semibold leading-6 text-slate-500">
+        <h2 className="my-auto text-base font-semibold leading-6 txt-color-blue">
           Recent Transactions
         </h2>
         <div className="flex gap-2 px-4 py-2 text-xs font-medium tracking-wide uppercase rounded-3xl bg-stone-100 text-neutral-600">

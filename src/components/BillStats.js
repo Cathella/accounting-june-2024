@@ -2,11 +2,11 @@ import * as React from "react";
 import PropTypes from "prop-types";
 
 function StatBlock({ percentage, amount, status, color }) {
-  const statusColor = status === "overdue" ? "text-orange-400" : (status === "paid" ? "text-lime-400" : "text-neutral-600");
+  const statusColor = status === "overdue" ? "text-orange-400" : (status === "paid" ? "txt-color-dirt-green" : "text-neutral-600");
 
   return (
     <div className="flex gap-5 justify-between mt-1">
-      <div className={`justify-center items-start px-6 py-5 text-base font-semibold leading-6 text-white rounded bg-slate-500 max-md:px-5`}> 
+      <div className={`justify-center items-start px-6 py-5 text-base font-semibold leading-6 text-white rounded bg-dark-blue max-md:px-5`}> 
         {percentage} 
       </div>
       <div className="flex flex-col my-auto">
@@ -40,7 +40,7 @@ function BillStats() {
       <div className="flex gap-5 max-md:flex-col max-md:gap-0">
         <div className="flex flex-col w-[36%] max-md:ml-0 max-md:w-full">
           <div className="flex flex-col grow font-semibold text-neutral-600 max-md:mt-10">
-            <h2 className="text-base leading-6 text-slate-500">Bill Stats</h2>
+            <h2 className="text-base leading-6 txt-color-blue">Bill Stats</h2>
             <div className="flex gap-2 px-4 py-2 mt-2 text-xs font-medium tracking-wide uppercase rounded-3xl bg-stone-100">
               <span>Last 30 days</span>
               <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e230b7ea2d550bf640ca159225698ee7a5b604118e1c573aef0dfaf7895e4553?apiKey=27ec22b9382040ef8580a5e340d3a921&" className="shrink-0 w-5 aspect-square" alt="Icon representing the last 30 days" />

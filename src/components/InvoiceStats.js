@@ -22,7 +22,7 @@ function InvoiceStats() {
       <div className="flex gap-5 max-md:flex-col max-md:gap-0">
         <div className="flex flex-col w-[38%] max-md:ml-0 max-md:w-full">
           <div className="flex flex-col grow font-semibold text-neutral-600 max-md:mt-10">
-            <header className="text-base leading-6 text-slate-500">
+            <header className="text-base leading-6 txt-color-blue">
               Invoice Stats
             </header>
             <div className="flex gap-2 px-4 py-2 mt-2 text-xs font-medium tracking-wide uppercase rounded-3xl bg-stone-100 max-md:pr-5">
@@ -35,9 +35,9 @@ function InvoiceStats() {
         </div>
         <div className="flex flex-col ml-5 w-[62%] max-md:ml-0 max-md:w-full">
           <div className="flex flex-col grow mx-auto w-full whitespace-nowrap bg-white max-md:mt-10">
-            <InvoiceStat percentage={12} amount="$900" status="overdue" color="#A3E635" textColor="#F97316" />
-            <InvoiceStat percentage={64} amount="$2,800" status="paid" color="#A3E635" textColor="#A3E635" />
-            <InvoiceStat percentage={24} amount="$1,100" status="unpaid" color="#A3E635" textColor="#1E293B" />
+            <InvoiceStat percentage={12} amount="$900" status="overdue" color="#9EC137" textColor="#F97316" />
+            <InvoiceStat percentage={64} amount="$2,800" status="paid" color="#9EC137" textColor="#9EC137" />
+            <InvoiceStat percentage={24} amount="$1,100" status="unpaid" color="#9EC137" textColor="#1E293B" />
           </div>
         </div>
       </div>

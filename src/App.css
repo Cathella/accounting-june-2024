@@ -14,6 +14,10 @@
     color: #4467A1;
 }
 
+.txt-color-dirt-green {
+    color: #9EC137;
+}
+
 .main-content {
     width: 94%;
     height: calc(100vh - 72px);

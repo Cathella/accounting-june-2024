@@ -19,7 +19,7 @@ function IncomeExpense() {
   return (
     <section className="flex flex-col justify-between px-6 py-4 bg-white rounded-3xl max-w-[534px] max-md:px-5 card-width">
       <header className="flex gap-5 justify-between w-full max-md:flex-wrap max-md:max-w-full">
-        <h1 className="my-auto text-base font-semibold leading-6 text-slate-500">Income and Expenses</h1>
+        <h1 className="my-auto text-base font-semibold leading-6 txt-color-blue">Income and Expenses</h1>
         <div className="flex gap-2 px-4 py-2 text-xs font-medium tracking-wide uppercase rounded-3xl bg-stone-100 text-neutral-600">
           <span className="my-auto">Last 30 days</span>
           <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e230b7ea2d550bf640ca159225698ee7a5b604118e1c573aef0dfaf7895e4553?apiKey=27ec22b9382040ef8580a5e340d3a921&" alt="Calendar icon" className="shrink-0 w-5 aspect-square" />

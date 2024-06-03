@@ -3,7 +3,7 @@ function CashBalanceInfo() {
     <section className="flex flex-col grow justify-between text-sm font-semibold text-neutral-400 max-md:mt-10">
       <p className="text-2xl capitalize text-neutral-600">$25,000</p>
       <p>Current cash Balance</p>
-      <p className="mt-20 text-base leading-6 text-lime-400 max-md:mt-10">+8.7% more</p>
+      <p className="mt-20 text-base leading-6 txt-color-dirt-green max-md:mt-10">+8.7% more</p>
       <p>From last month</p>
     </section>
   );
