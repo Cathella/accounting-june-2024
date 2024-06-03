@@ -37,7 +37,7 @@ function BillStats() {
   ];
 
   return (
-    <section className="justify-between px-6 py-5 bg-white rounded-3xl lg:w-1/2" tabIndex="0">
+    <section className="justify-between px-6 py-5 bg-white rounded-3xl w-full lg:w-[49%]" tabIndex="0">
       <div className="flex flex-col gap-5 xl:flex-row xl:justify-between">
         <div className="flex justify-between items-end lg:flex-col lg:items-start lg:gap-3">
           <div className="flex flex-col text-neutral-600">

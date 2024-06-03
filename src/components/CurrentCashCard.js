@@ -19,9 +19,9 @@ function CashBalanceImage() {
 
 function CurrentCashCard() {
   return (
-    <div className="justify-between px-6 py-4 bg-white rounded-3xl max-w-[534px] max-md:px-5 card-width">
-      <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-        <div className="flex flex-col w-[36%] max-md:ml-0 max-md:w-full">
+    <div className="justify-between px-6 py-4 bg-white rounded-3xl w-full lg:w-[49%]">
+      <div className="flex gap-5">
+        <div className="flex flex-col w-[36%]">
           <CashBalanceInfo />
         </div>
         <CashBalanceImage />
