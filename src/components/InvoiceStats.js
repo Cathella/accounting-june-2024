@@ -6,7 +6,7 @@ function InvoiceStat({ percentage, amount, status, color, textColor }) {
       <div className="justify-center items-start px-6 py-5 text-base font-semibold leading-6 text-white rounded max-md:px-5" style={{ backgroundColor: color }}>
         {percentage}%
       </div>
-      <div className="flex flex-col my-auto">
+      <div className="flex flex-col my-auto text-end">
         <div className="text-base font-semibold leading-6" style={{ color: textColor }}>
           {amount}
         </div>

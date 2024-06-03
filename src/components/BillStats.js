@@ -7,10 +7,10 @@ function StatBlock({ percentage, amount, status, color }) {
 
   return (
     <div className="flex gap-5 justify-between mt-1">
-      <div className={`justify-center items-start px-6 py-5 text-base font-semibold leading-6 text-white rounded bg-dark-blue max-md:px-5`}> 
+      <div className={`justify-center items-start px-6 py-4 text-base font-semibold leading-6 text-white rounded-tr-full rounded-br-full bg-dark-blue max-md:px-5`}> 
         {percentage} 
       </div>
-      <div className="flex flex-col my-auto">
+      <div className="flex flex-col my-auto text-end">
         <div className={`text-base font-semibold leading-6 ${statusColor}`}> 
           {amount} 
         </div>
@@ -37,29 +37,25 @@ function BillStats() {
   ];
 
   return (
-    <section className="justify-between px-6 py-5 bg-white rounded-3xl max-w-[534px] max-md:px-5 card-width" tabIndex="0">
-      <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-        <div className="flex flex-col w-[36%] max-md:ml-0 max-md:w-full">
-          <div className="flex flex-col grow text-neutral-600 max-md:mt-10">
+    <section className="justify-between px-6 py-5 bg-white rounded-3xl max-md:px-5" tabIndex="0">
+      <div className="flex flex-col gap-5">
+        <div className="flex justify-between items-end">
+          <div className="flex flex-col text-neutral-600">
             <h2 className="text-base leading-6 font-semibold txt-color-blue">Bill Stats</h2>
             <div className="flex gap-2 px-4 py-2 mt-2 text-xs font-medium tracking-wide uppercase rounded-3xl bg-stone-100 max-md:pr-5">
               <div className="my-auto">Last 30 days</div>
               <ChevronDown />
             </div>
-            <p className="mt-9 text-2xl font-semibold capitalize">$1,920</p>
+          </div>
+          <div>
+            <p className="text-2xl font-semibold capitalize">$1,920</p>
             <p className="text-sm text-neutral-400">Paid in the last 30 days</p>
           </div>
         </div>
-        <div className="flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full">
+        <div className="flex flex-col max-md:ml-0">
           <div className="flex flex-col grow mx-auto w-full whitespace-nowrap bg-white max-md:mt-10">
-            {statData.map((stat, index) => (
-              <StatBlock
-                key={index}
-                percentage={stat.percentage}
-                amount={stat.amount}
-                status={stat.status}
-                color={stat.color}
-              />
+            {statData.map((data, index) => (
+              <StatBlock key={index} {...data} />
             ))}
           </div>
         </div>
