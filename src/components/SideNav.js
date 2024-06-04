@@ -1,4 +1,4 @@
-import { LayoutDashboard, Files, ArrowRightLeft, Users, CreditCard, ReceiptText, FileText, FolderClosed, Settings, ChevronDown, Minus } from 'lucide-react';
+import { LayoutDashboard, Files, ArrowRightLeft, Users, ReceiptText, FolderClosed, Settings, ChevronDown, Minus } from 'lucide-react';
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 

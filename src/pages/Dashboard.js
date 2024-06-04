@@ -8,6 +8,7 @@ import InvoiceStats from "../components/InvoiceStats";
 import RecentTransactions from "../components/RecentTransactions";
 
 function Dashboard() {
+
   return (
     <div className="flex flex-col md:flex-row w-full">
       <SideNav />
