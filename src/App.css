@@ -31,3 +31,19 @@
 .side-nav {
     overflow: auto;
 }
+
+.slide-in {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+}
+  
+.slide-out {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.absolute-it {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
