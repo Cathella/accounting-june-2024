@@ -11,7 +11,7 @@ function SideNav() {
   };
 
   return (
-    <div className="side-nav flex flex-col w-3/12 h-screen scroll-auto">
+    <div className="side-nav flex flex-col w-3/12 h-screen scroll-auto hidden xl:block">
       <div className="flex justify-center items-center px-6 fx-height-100 w-full bg-white pb-0.5">
         <img
           loading="lazy"

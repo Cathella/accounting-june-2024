@@ -8,10 +8,10 @@ function TopNav() {
           <Plus className="shrink-0 self-start aspect-square" />
           <span>New Entry</span>
         </button>
-        <button className="bg-stone-100 py-3 px-3 rounded-full">
-            <BellDot className="" />
+        <button className="bg-stone-100 py-3 px-3 rounded-full text-neutral-600">
+            <BellDot />
         </button>
-        <button className="flex gap-2 items-center bg-stone-100 px-2 rounded-full">
+        <button className="flex gap-2 items-center bg-stone-100 px-2 rounded-full text-neutral-600">
           <div className="flex gap-2">
             <img
               loading="lazy"
