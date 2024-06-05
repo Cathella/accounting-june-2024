@@ -1,9 +1,9 @@
-import { LayoutDashboard, Files, ArrowRightLeft, Users, ReceiptText, FolderClosed, Settings, ChevronDown, Minus } from 'lucide-react';
+import { LayoutDashboard, Files, ArrowRightLeft, Users, ReceiptText, FolderClosed, Settings, ChevronDown, Minus, X } from 'lucide-react';
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
-function MobileNav({ isNavVisible }) {
-    const navClasses = isNavVisible ? 'slide-in' : 'slide-out';
+function MobileNav({ isNavVisible, setNavVisible }) {
+  const navClasses = isNavVisible ? 'slide-in' : 'slide-out';
   const location = useLocation();
   const [openDropdown, setOpenDropdown] = useState(null);
 
@@ -12,7 +12,10 @@ function MobileNav({ isNavVisible }) {
   };
 
   return (
-    <div className={`side-nav absolute-it flex flex-col w-[300px] h-screen scroll-auto ${navClasses}`}>
+    <div className={`side-nav fixed top-0 left-0 slide-in flex flex-col w-[300px] h-screen scroll-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] ${isNavVisible ? '' : 'slide-out'}`}>
+      <button onClick={() => setNavVisible(false)} className="bg-dark-blue text-white py-3 px-3 text-neutral-600">
+        <X />
+      </button>
       <div className="flex justify-center items-center px-6 fx-height-100 w-full bg-white pb-0.5">
         <img
           loading="lazy"

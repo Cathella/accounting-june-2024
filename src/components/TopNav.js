@@ -15,7 +15,7 @@ function TopNav() {
         <button className="bg-stone-100 py-3 px-3 rounded-full text-neutral-600 xl:hidden" onClick={toggleNav}>
           <Menu />
         </button>
-        <MobileNav isNavVisible={isNavVisible} />
+        <MobileNav isNavVisible={isNavVisible} setNavVisible={setNavVisible} />
         <div className="flex gap-4 ">
           <button className="flex text-white bg-dirt-green py-3 pr-8 pl-5 gap-2 font-semibold rounded-full hidden sm:flex">
             <Plus className="shrink-0 self-start aspect-square" />
